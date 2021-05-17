@@ -65,3 +65,14 @@ const dragonTag: MaybePopularTag = "dragon";
 const doSomething = (): void => { //void type is a set of undefined and null
     console.log("doSomething"); // void is used when we do not return anything in a function
 }
+// any - turns off TS checks (so not really recommended)
+let pepi: any = "foo";
+console.log(pepi.bar());
+// never
+// When narrowing, you can reduce the options of a union to a point where you have removed all possibilities and have nothing left. In those cases, TypeScript will use a never type to represent a state which shouldn’t exist.
+// unknown
+let vAny: any = 10;
+let vUnknown: unknown = 10;
+
+let s1: string = vAny;
+// let s2: string = vUnknown; -- Error

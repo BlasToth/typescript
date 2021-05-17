@@ -31,3 +31,13 @@ var dragonTag = "dragon";
 var doSomething = function () {
     console.log("doSomething"); // void is used when we do not return anything in a function
 };
+// any - turns off TS checks (so not really recommended)
+var pepi = "foo";
+console.log(pepi.bar());
+// never
+// When narrowing, you can reduce the options of a union to a point where you have removed all possibilities and have nothing left. In those cases, TypeScript will use a never type to represent a state which shouldn’t exist.
+// unknown
+var vAny = 10;
+var vUnknown = 10;
+var s1 = vAny;
+// let s2: string = vUnknown; -- Error
