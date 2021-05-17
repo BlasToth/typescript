@@ -33,7 +33,7 @@ var doSomething = function () {
 };
 // any - turns off TS checks (so not really recommended)
 var pepi = "foo";
-console.log(pepi.bar());
+// console.log(pepi.bar());
 // never
 // When narrowing, you can reduce the options of a union to a point where you have removed all possibilities and have nothing left. In those cases, TypeScript will use a never type to represent a state which shouldn’t exist.
 // unknown
@@ -41,3 +41,17 @@ var vAny = 10;
 var vUnknown = 10;
 var s1 = vAny;
 // let s2: string = vUnknown; -- Error
+// classes can be public (default), private, protected, readonly
+var Person = /** @class */ (function () {
+    function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    Person.prototype.getFullName = function () {
+        return this.firstName + ' ' + this.lastName;
+    };
+    return Person;
+}());
+var person = new Person("Jon", "Nieve");
+//console.log(person.firstName) - it is private
+console.log(person.getFullName());

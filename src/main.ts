@@ -67,7 +67,7 @@ const doSomething = (): void => { //void type is a set of undefined and null
 }
 // any - turns off TS checks (so not really recommended)
 let pepi: any = "foo";
-console.log(pepi.bar());
+// console.log(pepi.bar());
 // never
 // When narrowing, you can reduce the options of a union to a point where you have removed all possibilities and have nothing left. In those cases, TypeScript will use a never type to represent a state which shouldn’t exist.
 // unknown
@@ -76,3 +76,23 @@ let vUnknown: unknown = 10;
 
 let s1: string = vAny;
 // let s2: string = vUnknown; -- Error
+
+// classes can be public (default), private, protected, readonly
+class Person {
+    private firstName: string;
+    private lastName: string;
+    readonly unchangeableName: string;
+
+    constructor(firstName: string, lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    getFullName(): string {
+        return this.firstName + ' ' + this.lastName;
+    }
+}
+
+const person = new Person("Jon", "Nieve");
+//console.log(person.firstName) - it is private
+console.log(person.getFullName())
