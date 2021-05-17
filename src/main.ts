@@ -6,7 +6,6 @@ const getFullName = (name: string, surname: string): string => {
     return name + " " + surname;
 }
 console.log(getFullName("Type", "Script"))
-// types
 
 var myString: string = "Hello world";
 //myString = 22; //Type 'number' is not assignable to type 'string'.ts(2322)
@@ -60,3 +59,9 @@ interface CarInterface {
 const popularTags: PopularTag[] = ["dragon", "coffee"];
 
 const dragonTag: MaybePopularTag = "dragon";
+
+// --types--
+// void
+const doSomething = (): void => { //void type is a set of undefined and null
+    console.log("doSomething"); // void is used when we do not return anything in a function
+}

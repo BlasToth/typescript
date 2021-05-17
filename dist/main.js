@@ -5,7 +5,6 @@ var getFullName = function (name, surname) {
     return name + " " + surname;
 };
 console.log(getFullName("Type", "Script"));
-// types
 var myString = "Hello world";
 var user = {
     name: "Pepito",
@@ -27,3 +26,8 @@ var errorMessage = null;
 var usuario = null;
 var popularTags = ["dragon", "coffee"];
 var dragonTag = "dragon";
+// --types--
+// void
+var doSomething = function () {
+    console.log("doSomething"); // void is used when we do not return anything in a function
+};
