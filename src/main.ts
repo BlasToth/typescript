@@ -35,8 +35,8 @@ console.log(user.getMessage())
 
 // union operator
 interface IUsuario {
-    name: string,
-    surname: string
+    name: string;
+    surname: string;
 }
 let username: string = "Jon Snow";
 
@@ -45,3 +45,18 @@ let pageName: string | number = "1";
 let errorMessage: string | null = null;
 
 let usuario: IUsuario | null = null;
+
+// type alias
+type ID = string;
+type PopularTag = string;
+type MaybePopularTag = PopularTag | null;
+
+interface CarInterface {
+    id: ID;
+    name: string;
+    year: number;
+}
+
+const popularTags: PopularTag[] = ["dragon", "coffee"];
+
+const dragonTag: MaybePopularTag = "dragon";

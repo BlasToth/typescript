@@ -21,3 +21,9 @@ var user2 = {
     }
 };
 console.log(user.getMessage());
+var username = "Jon Snow";
+var pageName = "1";
+var errorMessage = null;
+var usuario = null;
+var popularTags = ["dragon", "coffee"];
+var dragonTag = "dragon";
