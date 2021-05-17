@@ -55,3 +55,19 @@ var Person = /** @class */ (function () {
 var person = new Person("Jon", "Nieve");
 //console.log(person.firstName) - it is private
 console.log(person.getFullName());
+// enums
+var statuses = {
+    notStarted: 0,
+    inProgress: 1,
+    done: 2
+};
+console.log(statuses.inProgress);
+var Status;
+(function (Status) {
+    Status[Status["NotStarted"] = 0] = "NotStarted";
+    Status[Status["InProgress"] = 1] = "InProgress";
+    Status[Status["Done"] = 2] = "Done";
+})(Status || (Status = {}));
+var notStartedStatus = Status.NotStarted;
+notStartedStatus = Status.Done;
+console.log(Status.InProgress);
