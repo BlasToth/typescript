@@ -32,3 +32,16 @@ const user2: UserInterFace = {
 
 };
 console.log(user.getMessage())
+
+// union operator
+interface IUsuario {
+    name: string,
+    surname: string
+}
+let username: string = "Jon Snow";
+
+let pageName: string | number = "1";
+
+let errorMessage: string | null = null;
+
+let usuario: IUsuario | null = null;
