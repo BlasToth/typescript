@@ -71,3 +71,4 @@ var Status;
 var notStartedStatus = Status.NotStarted;
 notStartedStatus = Status.Done;
 console.log(Status.InProgress);
+//   ^?
